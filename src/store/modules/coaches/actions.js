@@ -8,8 +8,9 @@ export default {
             hourlyRate: data.rate,
             areas: data.areas
         }
+        const token=context.rootGetters.token
 
-        const response = await fetch(`firebase.url/coaches/${userId}.json` , {
+        const response = await fetch(`firebase.url/coaches/${userId}.json?auth=${token}` , {
             method : 'PUT',
             body : JSON.stringify(coachData)
         })
