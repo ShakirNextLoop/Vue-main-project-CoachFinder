@@ -13,9 +13,9 @@ export default {
     },
     async auth(context, payload) {
         const mode = payload.mode
-        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyByePwYIqLr5QwfxgOlhoOb0fG9rmaXTto'
+        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[[api-key]]'
         if (mode == 'signup') {
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyByePwYIqLr5QwfxgOlhoOb0fG9rmaXTto'
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[[api-key]]'
         }
         const response = await fetch(url, {
             method: 'POST',
